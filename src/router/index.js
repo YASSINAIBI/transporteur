@@ -1,6 +1,12 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
+import Login from "../views/Login.vue";
+import Generale from "../views/Generale.vue";
+import Responsable from "../views/Responsable.vue";
+import Flotte from "../views/Flotte.vue";
+import Document from "../views/Document.vue";
+import Confirmation from "../views/Confirmation.vue";
 
 Vue.use(VueRouter);
 
@@ -11,14 +17,34 @@ const routes = [
     component: Home
   },
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: function() {
-      return import(/* webpackChunkName: "about" */ "../views/About.vue");
-    }
+    path: "/login",
+    name: "Login",
+    component: Login
+  },
+  {
+    path: "/generale",
+    name: "Generale",
+    component: Generale
+  },
+  {
+    path: "/responsable",
+    name: "Responsable",
+    component: Responsable
+  },
+  {
+    path: "/flotte",
+    name: "Flotte",
+    component: Flotte
+  },
+  {
+    path: "/document",
+    name: "Document",
+    component: Document
+  },
+  {
+    path: "/confirmation",
+    name: "Confirmation",
+    component: Confirmation
   }
 ];
 
